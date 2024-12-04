@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RBAC Admin Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>RBAC Admin Dashboard</h1>
+    <nav>
+      <button onclick="showSection('userManagement')">User Management</button>
+      <button onclick="showSection('roleManagement')">Role Management</button>
+    </nav>
+  </header>
+  <main>
+    <!-- User Management Section -->
+    <section id="userManagement" class="active">
+        <h2>User Management</h2>
+        <div class="form">
+          <input type="text" id="userName" placeholder="Name">
+          <input type="text" id="userRole" placeholder="Role">
+          <button onclick="addUser()">Add User</button>
+        </div>
+        <ul id="userList"></ul>
+      </section>
+  
+      <!-- Role Management Section -->
+      <section id="roleManagement">
+        <h2>Role Management</h2>
+        <div class="form">
+          <input type="text" id="roleName" placeholder="Role Name">
+          <input type="text" id="rolePermissions" placeholder="Permissions (comma-separated)">
+        <button onclick="addRole()">Add Role</button>
+      </div>
+      <ul id="roleList"></ul>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
